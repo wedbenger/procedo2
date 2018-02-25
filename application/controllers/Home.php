@@ -39,11 +39,11 @@ class Home extends CI_Controller
 			$userLogged = $this->modelusers->login($user,$senha);
 			if ($userLogged) {
 			//if exists, set the sessions
-				foreach($userLogged as $user) {
+				foreach($userLogged as $u) {
 					//set the data of user in the session
 					$dataSession['admin'] = true;
-					$dataSession['nameAdmin'] = $user->name;
-					$dataSession['id'] = $user->id;
+					$dataSession['nameAdmin'] = $u->name;
+					$dataSession['id'] = $u->id;
 					$this->session->set_userdata($dataSession);
 				}
 				//redirect to the contact
