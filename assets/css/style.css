@@ -1,0 +1,87 @@
+/* GENERAL CSS */
+body, html {
+    height: 100%;
+  }
+  
+.full-container {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.lead {
+    text-align: justify;
+}
+
+h3 {
+    color: #006bb3;
+}
+
+/* HEADER CSS */
+
+.full-container-top {
+    margin-top: 55px !important;
+}
+
+.container-top {
+    color:white;
+    background-color: rgba(0,0,0,0.3);
+    padding: 75px 0px 75px 0px;
+}
+
+.sub-title {
+    font-size: 2.5rem !important;
+}
+
+/* CONTENT */
+
+
+.full-container-mid {
+    background-color: #F2F2F2;
+  }
+  
+.full-container-mid2 {
+    background-color: #d9d9d9;
+}
+
+.container-mid {
+    padding: 50px 10px 40px 10px;
+}
+
+.sub-title-content {
+    font-size: 2.3rem !important;
+    font-weight: 500;
+    color:#006bb3;
+}
+
+.text-row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#chart_div {
+    margin-top:30px; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height:300px;
+}
+
+/* FOOTER CSS */
+
+.full-container-footer {
+    background-color: #000632;
+  }
+  
+.container-footer {
+    padding: 10px;
+    color:#f2f2f2
+}
+  
