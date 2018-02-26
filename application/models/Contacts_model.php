@@ -79,7 +79,7 @@ class Contacts_model extends CI_Model
     //search the new contacts by day, week and month
     public function newContacts() {
         //mount a sql to return the correct number by date
-        return $this->db->query("select SUM(CASE WHEN DATE_FORMAT(date_registered, '%Y-%m-%d') = curdate() then 1 else 0 end) today, SUM(CASE WHEN DATE_FORMAT(date_registered, '%Y-%m-%d') BETWEEN DATE_ADD(curdate(), INTERVAL DAYOFWEEK(curdate())-1 DAY) AND curdate() THEN 1 ELSE 0 END) week, SUM(CASE WHEN MONTH(date_registered) = MONTH(curdate()) AND YEAR(date_registered) = YEAR(curdate()) THEN 1 ELSE 0 END) month FROM contacts WHERE active = 1")->result();
+        return $this->db->query("select SUM(CASE WHEN DATE_FORMAT(date_registered, '%Y-%m-%d') = curdate() then 1 else 0 end) today, SUM(CASE WHEN DATE_FORMAT(date_registered, '%Y-%m-%d') BETWEEN DATE_ADD(curdate(), INTERVAL DAYOFWEEK(curdate())-1 DAY)*-1 AND curdate() THEN 1 ELSE 0 END) week, SUM(CASE WHEN MONTH(date_registered) = MONTH(curdate()) AND YEAR(date_registered) = YEAR(curdate()) THEN 1 ELSE 0 END) month FROM contacts WHERE active = 1")->result();
     }
     
 
